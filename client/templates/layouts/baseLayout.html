@@ -1,20 +1,37 @@
 <template name='baseLayout'>
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3" id="header">
-      {{#if currentUser.fisherman}}
-        {{> fishermanHeader}}
-      {{else}}
-          {{#if currentUser}}
-             {{> consumerHeader}}
+  <div class="row" id="nav-container">
+    <div class="col-md-8 col-md-offset-2" id="header">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4" id="logo">
+          <h1>Fresher</h1>
+        </div>
+        <div class="col-md-4" id="login">
+          <div class="dropdown">
+         <!--    <button class="btn btn-default dropdown-toggle" type="button" id="menu" data-toggle="dropdown">Menu <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu">
+              <li role="registerFisherman"><a role="menuitem" tabindex="-1" href="/fishermanRegister">Register a Fisherman</a></li>
+              <li role="registerConsumer"><a role="menuitem" tabindex="-1" href="/consumerRegister">Register a Consumer</a></li>
+              <li role="divider" class="divider"></li>
+              <li role="menuitem" tabindex="-1">{{>loginButton}}</li>
+            </ul> -->
+          {{#if currentUser.fisherman}}
+            {{> fishermanHeader}}
           {{else}}
-              <a href="/fishermanRegister">Fisherman</a>
-              <a href="/consumerRegister">Buyer</a>
-              {{> loginButton}}
+              {{#if currentUser}}
+                 {{> consumerHeader}}
+              {{else}}
+                  <a href="/fishermanRegister">Fisherman</a>
+                  <a href="/consumerRegister">Buyer</a>
+                  {{> loginButton}}
+              {{/if}}
           {{/if}}
-      {{/if}}
+          </div>
+        </div>
+      </div>
     </div>
+
   <div class="row">
-    <div class="col-md-6 col-md-offset-3" id="container-fluid">
+    <div class="col-md-6 col-md-offset-3" id="container">
       {{>yield}}
     </div>
   </div>
