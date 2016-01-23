@@ -1,10 +1,12 @@
 <template name='baseLayout'>
-	<div>
+	<div id="nav-container">
 		{{#if currentUser.fisherman}}
 			{{> fishermanHeader}}
 		{{else}}
 			{{> consumerHeader}}
 		{{/if}}
-		{{>yield}}
 	</div>
+  <div class="container-fluid">
+    {{>yield}}
+  </div>
 </template>
