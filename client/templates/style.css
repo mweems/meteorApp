@@ -9,6 +9,10 @@ a {
   background-color: #D3D3D3;
   height: 50px;
 }
+
+#header {
+  background-color: green;
+}
 .consumerHeader {
   background-color: green;
   height: 50px;
@@ -20,7 +24,7 @@ a {
   color: black;
   width: 22%
 }
-.container-fluid {
+#container-fluid {
   max-width: 600px;
   background-color: #FFFFFF;
 }

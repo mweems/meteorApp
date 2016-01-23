@@ -1,12 +1,23 @@
 <template name='baseLayout'>
-	<div id="nav-container">
-		{{#if currentUser.fisherman}}
-			{{> fishermanHeader}}
-		{{else}}
-			{{> consumerHeader}}
-		{{/if}}
-	</div>
-  <div class="container-fluid">
-    {{>yield}}
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3" id="header">
+      {{#if currentUser.fisherman}}
+        {{> fishermanHeader}}
+      {{else}}
+          {{#if currentUser}}
+             {{> consumerHeader}}
+          {{else}}
+              <a href="/fishermanRegister">Fisherman</a>
+              <a href="/consumerRegister">Buyer</a>
+              {{> loginButton}}
+          {{/if}}
+      {{/if}}
+    </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3" id="container-fluid">
+      {{>yield}}
+    </div>
+  </div>
+
   </div>
 </template>
