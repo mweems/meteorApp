@@ -1,32 +1,53 @@
 body {
-  background-color: #0088D2;
+  background-color: #039cd8;
 }
 a {
   text-decoration: none;
   color: black;
 }
+img {
+  height: 300px;
+  width: 300px;
+}
+.btn {
+  background-color: #039cd8;
+}
 #nav-container {
-  background-color: #D3D3D3;
-  height: 100px;
+  background-color: #dbdbdb;
+  height: 75px;
 }
 #header {
-  background-color: green;
-  height: 100px;
+  background-color: #dbdbdb;
+  height: 75px;
   display: inline-block;
 }
 #container {
-  background-color: #FFFFFF;
+  background-color: #039cd8;
   margin-top: 20px;
 }
+#menu {
+  margin-top: 20px;
+  background-color: #039cd8;
+  color: white;
+}
+#ad {
+  background-color: white;
+  margin: 10px;
+  padding: 15px;
+}
+.toUpper {
+  text-transform: uppercase;
+}
+.center {
+  position: absolute;
+  width: 300px;
+  margin: 0 auto;
+}
+.divider {
+  border-top: 1px black solid;
+  padding-bottom: 5px;
+}
 
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
+@media(min-width:680px){
 
-/* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) {  }
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) {  }
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) {  }
+}
