@@ -1,6 +1,6 @@
 <template name='baseLayout'>
   <div class="row" id="nav-container">
-    <div class="col-md-8 col-md-offset-2" id="header">
+    <div class="col-md-4 col-md-offset-4" id="header">
       <div class="row">
         <div class="col-md-4 col-md-offset-4" id="logo">
           <h1>Fresher</h1>
@@ -14,7 +14,7 @@
               {{#if currentUser}}
                  {{> consumerHeader}}
               {{else}}
-                <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="menu" data-toggle="dropdown">Log In/Register <span class="caret"></span></button>
+                <button class="btn btn-default btn-md dropdown-toggle" type="button" id="menu" data-toggle="dropdown">Log In/Register <span class="caret"></span></button>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="menu">
                   <li role="registerFisherman"><a role="menuitem" tabindex="-1" href="/fishermanRegister">Register a Fisherman</a></li>
                   <li role="registerConsumer"><a role="menuitem" tabindex="-1" href="/consumerRegister">Register a Consumer</a></li>
