@@ -1,5 +1,13 @@
 <template name='fishermanHeader'>
-  <div>
+<div class="row">
+  <div class="col-md-4" id="logo">
+    <p class="center welcome"><strong>WELCOME</strong></p>
+    <p class="center displayName">{{profile.displayName}}</p>
+  </div>
+  <div class="col-md-4" id="logo">
+    <h1>Fresher</h1>
+  </div>
+  <div class="col-md-4">
     <button class="btn btn-default btn-md dropdown-toggle menu" type="button" data-toggle="dropdown">Fisherman<span class="caret"></span></button>
     <ul class="dropdown-menu" role="menu" aria-labelledby="menu">
       <li role="home"><a role="menuitem" tabindex="-1" href="/marketPlace">Home</a></li>
@@ -9,5 +17,6 @@
       <li role="divider" class="divider"></li>
       <li role="logout" class="js-logout" tabindex="-1"><a href="/">Log Out</a></li>
     </ul>
+  </div>
   </div>
 </template>

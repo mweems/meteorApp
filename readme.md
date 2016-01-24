@@ -5,7 +5,7 @@ Working on:
 1. tightening up the marketPlace view
 2. need to add the actual date and not the text
 3. work on the media functions
-4.
+4. style registration pages for fisherman and consumer
 5.
 6.
 

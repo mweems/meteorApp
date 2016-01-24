@@ -12,6 +12,9 @@ img {
 h5 {
   text-transform: uppercase;
 }
+h4 {
+  color: #039cd8;
+}
 .btn {
   background-color: #039cd8;
 }
@@ -43,7 +46,10 @@ h5 {
 .center {
   text-align: center;
 }
-
+.welcome {
+  font-size: 15px;
+  padding-top: 10px;
+}
 @media(max-width:370px){
 
 }

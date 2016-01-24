@@ -7,3 +7,8 @@
 .login {
   margin-left: 30px;
 }
+.displayName{
+  padding-top: none;
+  font-size: 20px;
+  color: #039cd8;
+}

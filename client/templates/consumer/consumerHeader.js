@@ -9,7 +9,10 @@ Template.consumerHeader.rendered = function(){
 Template.consumerHeader.helpers({
 	id: function() {
 		return Meteor.user()._id;
-	}
+	},
+  profile: function() {
+    return Meteor.user().profile;
+  }
 });
 
 Template.consumerHeader.events({

@@ -1,4 +1,6 @@
 <template name="fishermanProfile">
+  <p>welcome {{displayName}}</p>
+
 	{{#with formData}}
 	<form>
 	<div class="form-group">
@@ -7,7 +9,7 @@
 		<input type="text" name="firstName" class="form-control" placeholder="first name" value={{firstName}}>
 		<input type="text" name="lastName" class="form-control" placeholder="last name" value={{lastName}}>
 		<input type="text" name="phone" class="form-control" placeholder="###-###-####" value={{phone}}>
-		<textarea name="bio" class="form-control" placeholder="Tell us about you">{{bio}}</textarea> 
+		<textarea name="bio" class="form-control" placeholder="Tell us about you">{{bio}}</textarea>
 	</div>
 	<div class="form-group">
 		<label>Licence Info</label>

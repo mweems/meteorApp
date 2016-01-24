@@ -9,7 +9,10 @@ Template.fishermanHeader.rendered = function(){
 Template.fishermanHeader.helpers({
 	id: function() {
 		return Meteor.user()._id;
-	}
+	},
+  profile: function() {
+    return Meteor.user().profile;
+  }
 });
 
 Template.fishermanHeader.events({
