@@ -1,15 +1,83 @@
 <template name="fishermanRegister">
-	<h2>Fisherman Registration</h2>
-	<form class="register">
-		<p>First Name: <input type="text" name="firstName"></p>
-		<p>Last Name: <input type="text" name="lastName"></p>
-		<p>Phone: <input type="text" name="phone"></p>
-		<p>Licence Location: <input type="text" name="licLoc"></p>
-		<p>License Name: <input type="text" name="licName"></p>
-		<p>Licence Number: <input type="text" name="licNum"></p>
-		<p>Licence Expiration: <input type="text" name="licEx"></p>
-		<p>Email: <input type="email" name="email"></p>
-		<p>Password: <input type="password" name="password"></p>
-		<p><input type="submit" value="Register"></p>
-	</form>
+  <div class="main">
+    <div class="center"><h2>Fisherman Registration</h2></div>
+
+  	<form class="form-horizontal register">
+      <div class="form-group">
+        <label for="displayName" class="col-sm-4">Display Name</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="Display Name" name="displayName">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="firstName" class="col-sm-4">First Name</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="First Name" name="firstName">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName" class="col-sm-4">Last Name</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="Last Name" name="lastName">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="Phone" class="col-sm-4">Phone</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="Phone" name="phone">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="licLoc" class="col-sm-4">Licence Location</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="Licence Location" name="licLoc">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="licName" class="col-sm-4">License Name</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="License Name" name="licName">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="licNum" class="col-sm-4">Licence Number</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="Licence Number" name="licNum">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="licEx" class="col-sm-4">Licence Expiration</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="Licence Expiration" name="licEx">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="col-sm-4">Email</label>
+        <div class="col-sm-8">
+          <input type="email" class="form-control" placeholder="Email" name="email">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="col-sm-4">Password</label>
+        <div class="col-sm-8">
+          <input type="password" class="form-control" placeholder="Password" name="password">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-4">
+          <button type="submit" class="btn btn-default" value="Register">Sign In</button>
+        </div>
+      </div>
+  	</form>
+  </div>
 </template>

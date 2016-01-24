@@ -1,30 +1,109 @@
 <template name="adForm">
-{{#with formData}}
-<form>
-	<div class="form-group">
-		<label>Personal Info</label>
-		<input type="text" name="firstName" class="form-control" placeholder="Your Name" value={{firstName}}>
-		<input type="text" name="lastName" class="form-control" placeholder="Your Name" value={{lastName}}>
-		<input type="text" name="phone" class="form-control" placeholder="###-###-####" value={{phone}}>
-	</div>
-	<div class="form-group">
-		<label>Catch Info</label>
-		<input type="text" name="fish" class="form-control" placeholder="Species">
-		<input type="text" name="size" class="form-control" placeholder="Weight of each">
-		<input type="text" name="quantity" class="form-control" placeholder="Quantity">
-		<input type="text" name="price" class="form-control" placeholder="Price">
-		<input type="radio" name="perPound" id="pound" value="Per Pound" checked="checked" /><label for="pound">Per Pound</label>
-		<input type="radio" name="perPound" id="perFish" value="Per Fish" /><label for="perFish">Per Fish</label>
-		<input type="radio" name="wholeFish" id="whole" value="Whole Fish" checked="checked" /><label for="whole">Whole Fish</label>
-		<input type="radio" name="wholeFish" id="filet" value="Filets Available" /><label for="fish">Filets Available</label>
-		<select name='loc'>
-			<option value="All of Oahu">All of Oahu</option>
-			<option value="Town">Town</option>
-			<option value="North Shore">North Shore</option>
-		</select>
-		<textarea name="addDet">additional details</textarea>
-	</div>
-	<button type="submit" class="btn btn-lg btn-primary btn-block">Create Ad</button>
-</form>
-{{/with}}
+<div class="main row">
+
+  {{#with formData}}
+  <form class="form-horizontal adForm">
+		<div class="center"><h2>Personal Info</h2></div>
+    <div class="form-group">
+      <label for="firstName" class="col-sm-4">First Name</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" placeholder="First name" name="firstName" value={{firstName}}>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName" class="col-sm-4">Last Name</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" placeholder="Last name" name="lastName" value={{lastName}}>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone" class="col-sm-4">Phone</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" placeholder="Phone" name="phone" value={{phone}}>
+      </div>
+    </div>
+
+    <div class="center"><h2>Catch Info</h2></div>
+
+    <div class="form-group">
+      <label for="species" class="col-sm-4">Species</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" placeholder="Species" name="species" value={{species}}>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="size" class="col-sm-4">Weight of Each</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" placeholder="Weight of Each" name="size" value={{size}}>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="quantity" class="col-sm-4">Quantity</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" placeholder="Quantity" name="quantity" value={{quantity}}>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="price" class="col-sm-4">Price</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" placeholder="Price" name="price" value={{price}}>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6 cost">
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="perPound" value="perPound" checked> Per Pound
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="perFish" value="perFish"> Per Fish
+          </label>
+        </div>
+      </div>
+
+      <div class="col-sm-6 soldBy">
+        <div class="radio">
+          <label for="">
+            <input type="radio" name="optionsRadios" id="whole" value="Whole Fish" checked> Whole Fish
+          </label>
+        </div>
+        <div class="radio">
+          <label for="">
+            <input type="radio" name="optionsRadios" id="filet" value="Filets Available"> Filets Available
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+    		<select name='loc'>
+    			<option value="All of Oahu">All of Oahu</option>
+    			<option value="Town">Town</option>
+    			<option value="North Shore">North Shore</option>
+    		</select>
+      </div>
+      <div class="col-sm-6">
+    		<textarea name="addDet">Additional Detail</textarea>
+      </div>
+  	</div>
+
+    <div class="divider"></div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-4 col-sm-4">
+        <button type="submit" class="btn btn-default">Create Ad</button>
+      </div>
+    </div>
+  </form>
+  {{/with}}
+</div>
 </template>

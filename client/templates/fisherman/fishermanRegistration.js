@@ -12,6 +12,7 @@ Template.fishermanRegister.events({
 	'submit form': function(event){
 		event.preventDefault();
 		var fisherman = {
+      displayName: event.target.displayName.value,
 			firstName: event.target.firstName.value,
 			lastName: event.target.lastName.value,
 			phone: event.target.phone.value,
@@ -38,7 +39,7 @@ Template.fishermanRegister.events({
 				console.log('created', success);
 			}
 		});
-		
+
 		Meteor.loginWithPassword(event.target.email.value, event.target.password.value);
 		Router.go('/marketPlace');
 	}

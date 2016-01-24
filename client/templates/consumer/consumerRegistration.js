@@ -12,6 +12,7 @@ Template.consumerRegister.events({
 	'submit form': function(event){
 		event.preventDefault();
 		var consumer = {
+      displayName: event.target.displayName.value,
 			firstName: event.target.firstName.value,
 			lastName: event.target.lastName.value,
 			phone: event.target.phone.value,
@@ -28,13 +29,13 @@ Template.consumerRegister.events({
 						console.log(error.reason);
 					}
 					if(success) {
-						console.log('update', success);
+						console.log('is consumer', success);
 					}
 				});
 				console.log('created', success);
 			}
 		});
-		
+
 		Meteor.loginWithPassword(event.target.email.value, event.target.password.value);
 		Router.go('/marketPlace');
 	}
