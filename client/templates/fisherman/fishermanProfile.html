@@ -1,33 +1,101 @@
 <template name="fishermanProfile">
-  <p>welcome {{displayName}}</p>
+  <div class="main row">
+  	{{#with formData}}
+  	<form class="form-horizontal fishermanProfile">
+      <div class="center"><h2>Personal Info</h2></div>
 
-	{{#with formData}}
-	<form>
-	<div class="form-group">
-		<label>Personal Info</label>
-		<input type="text" name="displayName" class="form-control" placeholder="display name" value={{displayName}}>
-		<input type="text" name="firstName" class="form-control" placeholder="first name" value={{firstName}}>
-		<input type="text" name="lastName" class="form-control" placeholder="last name" value={{lastName}}>
-		<input type="text" name="phone" class="form-control" placeholder="###-###-####" value={{phone}}>
-		<textarea name="bio" class="form-control" placeholder="Tell us about you">{{bio}}</textarea>
-	</div>
-	<div class="form-group">
-		<label>Licence Info</label>
-		<input type="text" name="licLoc" class="form-control" placeholder="Licence Location" value={{licLoc}}>
-		<input type="text" name="licNum" class="form-control" placeholder="Licence Number" value={{licNum}}>
-		<input type="text" name="licName" class="form-control" placeholder="Licence Name" value={{licName}}>
-		<input type="text" name="licEx" class="form-control" placeholder="Licence Expiration" value={{licEx}}>
-	</div>
-	<div class="form-group">
-		<label>Fishing Info</label>
-		<select name='loc'>
-			<option value=0>All of Oahu</option>
-			<option value=1>Town</option>
-			<option value=2>North Shore</option>
-		</select>
-		<input type="text" name="gear" class="form-control" placeholder="Fishing Gear Type" value={{gearType}}>
-	</div>
-	<button type="submit" class="btn btn-lg btn-primary btn-block">Save Changes</button>
-</form>
-{{/with}}
+      <div class="form-group">
+        <label for="displayName" class="col-sm-4">Display Name</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="Display name" name="displayName" value={{displayName}}>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="firstName" class="col-sm-4">First Name</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="First name" name="firstName" value={{firstName}}>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName" class="col-sm-4">Last Name</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="Last name" name="lastName" value={{lastName}}>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone" class="col-sm-4">Phone</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="Phone" name="phone" value={{phone}}>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="bio" class="col-sm-4">Bio</label>
+        <div class="col-sm-8">
+          <textarea type="text" class="form-control" placeholder="Tell us about yourself" name="bio">{{bio}}</textarea>
+        </div>
+      </div>
+
+      <div class="center"><h2>Licence Information</h2></div>
+      <div class="form-group">
+        <label for="licLoc" class="col-sm-4">Licence Location</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="Licence Location" name="licLoc" value={{licLoc}}>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="licNum" class="col-sm-4">Licence Number</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="Licence Number" name="licNum" value={{licNum}}>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="licName" class="col-sm-4">Licence Name</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="Licence Name" name="licName" value={{licName}}>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="licEx" class="col-sm-4">Licence Expiration</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="Licence Expiration" name="licEx" value={{licEx}}>
+        </div>
+      </div>
+
+      <div class="center"><h2>Fishing Information</h2></div>
+
+    	<div class="form-group">
+        <label for="location" class="col-sm-4">Location</label>
+        <div class="col-sm-8">
+          <select name='loc'>
+            <option value="All of Oahu">All of Oahu</option>
+            <option value="Town">Town</option>
+            <option value="North Shore">North Shore</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="gear" class="col-sm-4">Gear Type</label>
+        <div class="col-sm-8">
+          <textarea type="text" class="form-control" placeholder="Type of Gear" name="gear">{{gearType}}</textarea>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-4">
+          <button type="submit" class="btn btn-default">Save Changes</button>
+        </div>
+      </div>
+  </form>
+  {{/with}}
+  </div>
 </template>
