@@ -34,7 +34,7 @@ Template.fishermanProfile.events({
 				console.log(error.reason);
 			}
 			if(success){
-				console.log(success);
+				console.log(success, "hi therer");
 				Router.go('/managePosts');
 			}
 		});
