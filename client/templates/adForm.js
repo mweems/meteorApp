@@ -32,8 +32,7 @@ Template.adForm.events({
 			createdAt: new Date(),
 			owner: Meteor.userId(),
 			id: Meteor.user()
-		}
-		console.log(newAd.fish);
+		};
 		Meteor.call("addData", newAd, function(error, success) {
 			if(error) {
 				console.log(error);
