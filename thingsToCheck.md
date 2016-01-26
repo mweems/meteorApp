@@ -6,6 +6,7 @@ Working on:
 5.round the edges of ads
 6.add some text area or something to the contact page that will contact the fisherman
 7.fix the radio buttons not outputing the right data
+8.fisherman profile - location and gear type isn't automatic populated after saving and retrun back to profile
 
 
 
