@@ -1,3 +1,7 @@
+@grid-columns:              12;
+@grid-gutter-width:         30px;
+@grid-float-breakpoint:     650px;
+
 body {
   background-color: #039cd8;
 }
@@ -54,4 +58,9 @@ h4 {
 }
 @media(max-width:370px){
 
+}
+.border-radius(@radius: 5px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
 }
