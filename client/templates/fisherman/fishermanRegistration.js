@@ -6,7 +6,9 @@ Template.fishermanRegister.rendered = function(){
 
 };
 
-Template.fishermanRegister.helpers({});
+Template.fishermanRegister.helpers({
+	
+});
 
 Template.fishermanRegister.events({
 	'submit form': function(event){

@@ -3,13 +3,13 @@
 		{{#if currentUser.fisherman}}
 			{{> fishermanHeader}}
 		{{else}}
-        {{#if currentUser}}
-			     {{> consumerHeader}}
-        {{else}}
-            <a href="/fishermanRegister">Fisherman</a>
-            <a href="/consumerRegister">Buyer</a>
-            {{> loginButton}}
-        {{/if}}
+			{{#if currentUser}}
+				{{> consumerHeader}}
+			{{else}}
+				<a href="/fishermanRegister">Fisherman</a>
+				<a href="/consumerRegister">Buyer</a>
+				{{> loginButton}}
+			{{/if}}
 		{{/if}}
 		{{>yield}}
 	</div>
