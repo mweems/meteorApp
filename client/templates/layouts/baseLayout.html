@@ -3,11 +3,7 @@
 		{{#if currentUser.fisherman}}
 			{{> fishermanHeader}}
 		{{else}}
-			{{#if currentUser}}
-				{{> consumerHeader}}
-			{{else}}
-				{{> loginButtons}}
-			{{/if}}
+			{{> consumerHeader}}
 		{{/if}}
 		{{>yield}}
 	</div>

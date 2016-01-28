@@ -2,15 +2,12 @@ Router.configure({
 	layoutTemplate: 'baseLayout'
 });
 
+Router.onBeforeAction(IR_BeforeHooks.isLoggedIn);
+
 Router.route('', {
 	path: '/',
-	template: 'marketPlace',
-	subscriptions: function() {
-		return Meteor.subscribe('ads');
-	},
-	data: function() {
-		return Ads.find({}, {sort: {createdAt: -1}});
-	}
+	template: 'login',
+	layoutTemplate: null
 });
 Router.route('marketPlace', {
 	path: '/marketPlace',

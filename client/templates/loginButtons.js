@@ -1,12 +1,12 @@
-Template.loginButton.created = function(){
+Template.loginButtons.created = function(){
 };
 
-Template.loginButton.rendered = function(){
+Template.loginButtons.rendered = function(){
 };
 
-Template.loginButton.helpers({});
+Template.loginButtons.helpers({});
 
-Template.loginButton.events({
+Template.loginButtons.events({
 	'submit form': function(event, data){
 		event.preventDefault();
 		var email = event.target.loginEmail.value;
