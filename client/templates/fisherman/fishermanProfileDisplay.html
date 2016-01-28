@@ -1,0 +1,25 @@
+<template name="fishermanProfileDisplay">
+	<div class="form-group">
+		<label>Personal Info</label>
+		<p>{{this.profile.displayName}}</p>
+		<p>{{this.profile.firstName}}</p>
+		<p>{{this.profile.lastName}}</p>
+		<p>{{this.profile.phone}}</p>
+		<p>{{this.profile.bio}}</p> 
+	</div>
+	<div class="form-group">
+		<label>Licence Info</label>
+		<p>{{this.profile.licLoc}}</p>
+		<p>{{this.profile.licNum}}</p>
+		<p>{{this.profile.licName}}</p>
+		<p>{{formatDate this.profile.licEx}}</p>
+	</div>
+	<div class="form-group">
+		<label>Fishing Info</label>
+		<p>{{this.profile.landingLocation}}</p>
+		<p>{{this.profile.gearType}}</p>
+	</div>
+	{{#if isMyProfile}}
+	<button><a href="/fishermanProfileEdit/{{this.profile._id}}">Edit</a></button>
+	{{/if}}
+</template>

@@ -13,5 +13,9 @@ Template.ad.events({
 		event.preventDefault();
 		var adId = $(event.currentTarget).parent('.ad').data('id');
 
+	},
+	'click .js-fishermanName': function(event,template){
+		var userId = Template.instance().data.owner;
+		Router.go("/fishermanProfileDisplay/" + userId);
 	}
 });

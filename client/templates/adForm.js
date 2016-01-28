@@ -29,8 +29,7 @@ Template.adForm.events({
 			loc: event.target.loc.value,
 			addDet: event.target.addDet.value,
 			createdAt: new Date(),
-			owner: Meteor.userId(),
-			id: Meteor.user()
+			owner: Meteor.userId()
 		}
 		console.log(newAd.fish);
 		Meteor.call("addData", newAd, function(error, success) {

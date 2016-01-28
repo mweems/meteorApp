@@ -6,9 +6,7 @@
 			{{#if currentUser}}
 				{{> consumerHeader}}
 			{{else}}
-				<a href="/fishermanRegister">Fisherman</a>
-				<a href="/consumerRegister">Buyer</a>
-				{{> loginButton}}
+				{{> loginButtons}}
 			{{/if}}
 		{{/if}}
 		{{>yield}}

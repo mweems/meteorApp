@@ -17,4 +17,12 @@ Meteor.publish('fishermanAds', function() {
 
 Meteor.publish('thisUser', function() {
 	return Meteor.users.find(this.userId);
-})
+});
+
+Meteor.publish('userProfile', function(id){
+	return Meteor.users.find({_id: id}, {
+		fields: {
+			profile:1
+		}
+	});
+});

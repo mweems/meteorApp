@@ -1,18 +1,21 @@
-Template.fishermanProfile.created = function(){
+Template.fishermanProfileEdit.created = function(){
 
 };
 
-Template.fishermanProfile.rendered = function(){
+Template.fishermanProfileEdit.rendered = function(){
 
 };
 
-Template.fishermanProfile.helpers({
+Template.fishermanProfileEdit.helpers({
 	formData: function(){
     	return Meteor.user().profile;
+  	},
+  	formatDate: function(date){
+  		return moment.unix(date).format("MMM DD YYYY");
   	}
 });
 
-Template.fishermanProfile.events({
+Template.fishermanProfileEdit.events({
 	'submit form': function(event) {
 		event.preventDefault();
 		var fisherman = {

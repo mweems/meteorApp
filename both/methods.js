@@ -1,4 +1,7 @@
 var isValid = function(fisherman){
+	if(!Modules.both.validators.phoneNumber(fisherman.phone)){
+		return false;
+	};
 	return true;
 };
 

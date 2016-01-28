@@ -43,9 +43,15 @@ Router.route('consumerRegister', {
 	path: '/consumerRegister',
 	template: 'consumerRegister'
 });
-Router.route('fishermanProfile', {
-	path: '/fishermanProfile/:_id',
-	template: 'fishermanProfile',
+Router.route('fishermanProfileDisplay', {
+	path: '/fishermanProfileDisplay/:_id',
+	template: 'fishermanProfileDisplay',
+	subscriptions: function() {
+		return Meteor.subscribe('userProfile', this.params._id);
+	},
+	data: function() {
+		return Meteor.users.findOne({_id: this.params._id});
+	} 
 });
 Router.route('consumerProfile', {
 	path: '/consumerProfile/:_id',

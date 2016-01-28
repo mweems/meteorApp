@@ -1,4 +1,4 @@
-<template name="fishermanProfile">
+<template name="fishermanProfileEdit">
 	{{#with formData}}
 	<form>
 	<div class="form-group">
@@ -14,7 +14,7 @@
 		<input type="text" name="licLoc" class="form-control" placeholder="Licence Location" value={{licLoc}}>
 		<input type="text" name="licNum" class="form-control" placeholder="Licence Number" value={{licNum}}>
 		<input type="text" name="licName" class="form-control" placeholder="Licence Name" value={{licName}}>
-		<input type="text" name="licEx" class="form-control" placeholder="Licence Expiration" value={{licEx}}>
+		<input type="text" name="licEx" class="form-control" placeholder="Licence Expiration" value={{formatDate licEx}}>
 	</div>
 	<div class="form-group">
 		<label>Fishing Info</label>
