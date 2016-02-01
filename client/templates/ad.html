@@ -29,22 +29,32 @@
         <h4>{{ size }}</h4>
         <h5>Price</h5>
         <h4>{{ price }}</h4>
-        <h4>{{perPound}} - {{wholeFish}}</h4>
+        <h4>{{perPound}} {{perFish}} {{wholeFish}} {{filetsAvail}}</h4>
         <h4>{{loc}}</h4>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-12 center">
-        {{addDet}}
+        <textarea name="" id="" cols="50" rows="5">{{addDet}}</textarea>
       </div>
     </div>
 
     <div class="divider"></div>
 
+    <div id="commentBox" style="display: none">
+      <div class="row">
+        <div class="col-md-12 center">
+          <textarea name="commentBox" cols="50" rows="5" placeholder="Leave Comment" ></textarea>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+    </div>
+
     <div class="row">
       <div class="center">
-      <button type="button" class="btn btn-default"><a href='/ad/{{_id}}'>CONTACT</a></button>
+      <button type="button" class="btn btn-default" onclick="$('#commentBox').toggle();"><a href='/ad/{{_id}}'>CONTACT</a></button>
       </div>
     </div>
   </div>
